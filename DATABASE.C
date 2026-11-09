@@ -104,3 +104,40 @@ void ModifyDepartureTime(list* H)
         }
     }
 }
+
+
+/* 2. Delete a departure */
+void delet(list **H)
+{
+    int number;
+    list *prev = NULL;
+    list *cur = *H;
+
+    if (*H == NULL) {
+        printf("The list is empty.\n");
+        return;
+    }
+
+    printf("Number of the departure to delete: ");
+    scanf("%d", &number);
+
+    /* look for the departure */
+    while (cur != NULL && cur->value.number != number) {
+        prev = cur;
+        cur = cur->next;
+    }
+
+    if (cur == NULL) {
+        printf("Departure not found.\n");
+        return;
+    }
+
+    /* delete it */
+    if (prev == NULL) {
+        *H = cur->next;               
+    } else {
+        prev->next = cur->next;          
+    }
+    free(cur);
+    printf("Departure deleted.\n");
+}
