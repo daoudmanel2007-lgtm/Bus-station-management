@@ -1,4 +1,49 @@
-#include "datastructure.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+#include  "data structure.h"
+
+
+
+
+
+/* --------------------operatin4 search by destination---------------------
+---------------------------------------------------------------------------*/ 
+
+void searchdest(list *H){
+	
+	char dest[50];
+	printf("\n Give me the destination \n");
+	scanf("%s",&dest);
+	
+	
+		//search part    
+	
+	bool exist=false;
+	list* p=H;
+		while(p!=NULL){
+		   if(strcasecmp((((*H).value).destination), dest)==0){
+		    printf("\n-------------------------\n");
+            printf("Departure number: %d\n", P->value.number);
+            printf("Destination: %s\n", P->value.destination);
+            printf("Departure time: %02d:%02d\n",
+                   P->value.departureTime.hour,
+                   P->value.departureTime.minute);
+            printf("Bus capacity: %d\n", P->value.busCapacity);
+            printf("Available seats: %d\n", P->value.availableSeats);
+            P = P->next;
+        exist=true;
+		   }
+		    p=(*p).next;
+	     }
+	     
+		 //case the destination does not exist
+		 if(!exist){printf("\n this destination does not exist");
+		 }
+	     
+}
+
 /*-------------------------------------------------
 
    DISPLAY BY TIME (Ascending and Descending order)
