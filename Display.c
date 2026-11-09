@@ -177,3 +177,49 @@ void DisplayDepartures(list *H)
     }
 }
 
+
+void WriteDeparture(list *P)
+{
+    printf("\n------ DEPARTURE ------\n");
+    printf("Number          : %d\n", P->value.number);
+    printf("Destination     : %s\n", P->value.destination);
+    printf("Time            : %02d:%02d\n", P->value.departureTime.hour,
+                                            P->value.departureTime.minute);
+    printf("Capacity        : %d\n", P->value.busCapacity);
+    printf("Available seats : %d\n", P->value.availableSeats);
+    printf("Ticket price    : %.2f DA\n", P->value.tickprice);
+    printf("-----------------------\n");
+}
+
+
+void DisplayStat(list *H)
+{
+    list *P;
+    int nbDep = 0, nbFull = 0, totalSold = 0, totalSeats = 0;
+    float totalRevenue = 0;
+ 
+    if (H == NULL) {
+        printf("The list is empty.\n");
+    }
+    else {
+        P = H;
+        while (P != NULL) {
+            nbDep++;
+            totalSold    = totalSold + P->value.nbsold;
+            totalSeats   = totalSeats + P->value.availableSeats;
+            totalRevenue = totalRevenue + P->value.revenue;
+            if (P->value.availableSeats == 0)
+                nbFull++;
+            P = P->next;
+        }
+ 
+        printf("\n~~~~~~~~ STATION STATISTICS ~~~~~~~~\n");
+        printf("Total departures : %d\n", nbDep);
+        printf("Full buses       : %d\n", nbFull);
+        printf("Available seats  : %d\n", totalSeats);
+        printf("Tickets sold     : %d\n", totalSold);
+        printf("Total revenue    : %.2f DA\n", totalRevenue);
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    }
+}
+ 
