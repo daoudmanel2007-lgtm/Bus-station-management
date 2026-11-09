@@ -70,7 +70,13 @@ list* Search(list* H, int Num)
     }
     return P;
 }
- //reserve a seat and get your price and print the ticket
+
+/*---------------------------------------------------
+
+Reserve a seat and get your price and print the ticket
+
+------------------------------------------------------*/
+
 void Reserve(list* H)
 {
     list *P;
@@ -107,7 +113,12 @@ void Reserve(list* H)
         }
     }
 }
- //cancelling the reservation+ and get refund
+/*-----------------------------------------
+
+ Cancelling the reservation+ and get refund
+
+------------------------------------------*/
+
 void Cancel(list* H)
 {
     list *P;

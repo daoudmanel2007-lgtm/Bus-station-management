@@ -53,6 +53,18 @@ void AddDeparture(list** H)
         D.availableSeats = ReadInt("Enter available seats: ");
     } while (D.availableSeats < 0 || D.availableSeats > D.busCapacity);
 
+
+    //PRICE and FINANCE (added by Manel)
+    do {
+        printf("Enter ticket price: ");
+        scanf("%f", &D.tickprice);
+    } while (D.tickprice < 0);
+
+    D.revenue = 0;
+    D.nbsold = 0;
+
+
+
     Q = (list*)malloc(sizeof(list));
     if (Q == NULL) {
         printf("Memory allocation failed!\n");
@@ -105,8 +117,12 @@ void ModifyDepartureTime(list* H)
     }
 }
 
+/*------------------------------
 
-/* 2. Delete a departure */
+    DELETE A DEPARATURE 
+
+---------------------------------*/
+
 void delet(list **H)
 {
     int number;
