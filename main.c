@@ -54,7 +54,7 @@ switch (choice){
 	case 6 : printf("\n\n \t \t \t CANCEL RESERVATION \n ");Cancel(H);break;
 	case 7 : printf("\n\n \t \t \t DISPLAY DEPARTURES \n ");DisplayDepartures(H);break;
 	case 8 : printf("\n\n \t \t \t DISPLAY DEPARTURES BY TIME\n ");DisplayByTime(H);break;
-	case 9 : printf("\n\n \t \t \t DISPLAY STATICS \n "); DisplayStat(H);break;
+	case 9 : printf("\n\n \t \t \t DISPLAY STATICS \n ");DisplayStat(H);break;
 	case 10 : printf("\n\n \t \t \t EXIT \n ");ext(H,&exit);break;
 }
 
