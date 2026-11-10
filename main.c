@@ -37,7 +37,7 @@ while (choice<1 || choice>10){
 }
 //verify if the manager really want to continue this operation
 
-if(a!=10){
+if(choice!=10){
 
 int a;
 	printf("\n Are you sure you want to continue this operation \t 1:yes   2:no ");
