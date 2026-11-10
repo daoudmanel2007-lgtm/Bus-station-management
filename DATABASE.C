@@ -1,6 +1,9 @@
 #include "datastructure.h"
 #include <string.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+ 
 int ReadInt(const char message[]) {
     int x;
     printf("%s", message);
