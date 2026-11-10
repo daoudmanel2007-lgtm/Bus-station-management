@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include  "data structure.h"
+#include  "datastructure.h"
 
 //this is a fuction to check if the elementr exist in the linked list 
 
