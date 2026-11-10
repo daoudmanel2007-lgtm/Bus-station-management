@@ -210,13 +210,15 @@ void DisplayDepartures(list *H)
         }
 
         P = H;
-        for (int i = 0; i < count; i++) {
+        int i = 0;
+        for(; i < count; i++) {
             arr[i] = P;
             P = P->next;
         }
 
         // Print backwards from last (oldest) to first (newest)
-        for (int i = count - 1; i >= 0; i--) {
+        i = count - 1;
+        for (; i >= 0; i--) {
             printf("\n-------------------------\n");
             printf("Departure number: %d\n", arr[i]->value.number);
             printf("Destination: %s\n", arr[i]->value.destination);

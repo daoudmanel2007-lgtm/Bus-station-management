@@ -155,6 +155,7 @@ void delet(list **H)
     if (prev == NULL) {
         *H = cur->next;               
     } else {
+    
         prev->next = cur->next;          
     }
     free(cur);
