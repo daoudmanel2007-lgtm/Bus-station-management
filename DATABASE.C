@@ -70,7 +70,7 @@ void AddDeparture(list** H)
 
     Q = (list*)malloc(sizeof(list));
     if (Q == NULL) {
-        printf("Memory allocation failed!\n");
+        printf("\t Memory allocation failed!\n");
         return;
     }
     Q->value = D;
@@ -92,7 +92,7 @@ void ModifyDepartureTime(list* H)
     Time NewTime;
 
     if (H == NULL) {
-        printf("The list is empty\n");
+        printf("\t The list is empty\n");
     }
     else {
         Num = ReadInt("Enter departure number: ");
@@ -115,7 +115,7 @@ void ModifyDepartureTime(list* H)
             } while (NewTime.minute < 0 || NewTime.minute > 59);
 
             P->value.departureTime = NewTime;
-            printf("Departure time modified successfully\n");
+            printf("\n \t Departure time modified successfully\n");
         }
     }
 }
@@ -133,7 +133,7 @@ void delet(list **H)
     list *cur = *H;
 
     if (*H == NULL) {
-        printf("The list is empty.\n");
+        printf("\t The list is empty.\n");
         return;
     }
 

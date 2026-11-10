@@ -51,16 +51,16 @@ int a;
 }
 	//in case confirmation
 switch (choice){
-    case 1 : printf("\n\n \t \t \t ADD DEPARTURE \n ");AddDeparture(&H);break;
-	case 2 : printf("\n\n \t \t \t DELETE DEPARTURE \n ");delet(&H);break;
-	case 3 : printf("\n\n \t \t \t MODIFY A DEPARTURE TIME \n ");ModifyDepartureTime(H);break;
-	case 4 : printf("\n\n \t \t \t SEACH BY DESTINATION \n ");searchdest(H);break;
-	case 5 : printf("\n\n \t \t \t RESERVE A SEAT\n ");Reserve(H);break;
-	case 6 : printf("\n\n \t \t \t CANCEL RESERVATION \n ");Cancel(H);break;
-	case 7 : printf("\n\n \t \t \t DISPLAY DEPARTURES \n ");DisplayDepartures(H);break;
-	case 8 : printf("\n\n \t \t \t DISPLAY DEPARTURES BY TIME\n ");DisplayByTime(H);break;
-	case 9 : printf("\n\n \t \t \t DISPLAY STATICS \n ");DisplayStat(H);break;
-	case 10 : printf("\n\n \t \t \t EXIT \n ");ext(H,&exit);break;
+    case 1 : printf("\n\n \t \t \t ADD DEPARTURE \n \n \n  ");AddDeparture(&H);break;
+	case 2 : printf("\n\n \t \t \t DELETE DEPARTURE \n\n\n ");delet(&H);break;
+	case 3 : printf("\n\n \t \t \t MODIFY A DEPARTURE TIME \n \n \n  ");ModifyDepartureTime(H);break;
+	case 4 : printf("\n\n \t \t \t SEACH BY DESTINATION \n\n\n ");searchdest(H);break;
+	case 5 : printf("\n\n \t \t \t RESERVE A SEAT\n \n\n");Reserve(H);break;
+	case 6 : printf("\n\n \t \t \t CANCEL RESERVATION \n \n \n");Cancel(H);break;
+	case 7 : printf("\n\n \t \t \t DISPLAY DEPARTURES \n \n \n");DisplayDepartures(H);break;
+	case 8 : printf("\n\n \t \t \t DISPLAY DEPARTURES BY TIME\n \n \n ");DisplayByTime(H);break;
+	case 9 : printf("\n\n \t \t \t DISPLAY STATICS \n \n \n ");DisplayStat(H);break;
+	case 10 : printf("\n\n \t \t \t EXIT \n \n \n");ext(H,&exit);break;
 }
 
 
