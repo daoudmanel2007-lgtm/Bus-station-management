@@ -31,8 +31,8 @@ typedef struct list {
     struct list* next;
 } list;
 
-int ReadInt(char message[]);
-void ReadString(char message[], char str[], int size);
+int ReadInt(const char message[]);
+void ReadString(const char message[], char str[], int size);
 
 void AddDeparture(list **H);
 void delet(list **H);

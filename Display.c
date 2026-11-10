@@ -7,7 +7,19 @@
 
 
 
-
+void WriteDeparture(list *P)
+{
+    printf("\n------ DEPARTURE ------\n");
+    printf("Number          : %d\n", P->value.number);
+    printf("Destination     : %s\n", P->value.destination);
+    printf("Time            : %02d:%02d\n", P->value.departureTime.hour,
+                                            P->value.departureTime.minute);
+    printf("Capacity        : %d\n", P->value.busCapacity);
+    printf("Available seats : %d\n", P->value.availableSeats);
+    printf("Ticket price    : %.2f DA\n", P->value.tickprice);
+    printf("-----------------------\n");
+}
+ 
 /* --------------------operatin4 search by destination---------------------
 ---------------------------------------------------------------------------*/ 
 
@@ -223,18 +235,7 @@ void DisplayDepartures(list *H)
 }
 
 
-void WriteDeparture(list *P)
-{
-    printf("\n------ DEPARTURE ------\n");
-    printf("Number          : %d\n", P->value.number);
-    printf("Destination     : %s\n", P->value.destination);
-    printf("Time            : %02d:%02d\n", P->value.departureTime.hour,
-                                            P->value.departureTime.minute);
-    printf("Capacity        : %d\n", P->value.busCapacity);
-    printf("Available seats : %d\n", P->value.availableSeats);
-    printf("Ticket price    : %.2f DA\n", P->value.tickprice);
-    printf("-----------------------\n");
-}
+
 
 
 void DisplayStat(list *H)

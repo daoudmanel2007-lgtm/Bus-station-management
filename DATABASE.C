@@ -1,7 +1,10 @@
 #include "datastructure.h"
 #include <string.h>
-
-int ReadInt(char message[]) {
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+ 
+int ReadInt(const char message[]) {
     int x;
     printf("%s", message);
     scanf("%d", &x);
@@ -9,7 +12,7 @@ int ReadInt(char message[]) {
     return x;
 }
 
-void ReadString(char message[], char str[], int size) {
+void ReadString(const char message[], char str[], int size) {
     printf("%s", message);
     fgets(str, size, stdin);
     str[strcspn(str, "\n")] = '\0';
