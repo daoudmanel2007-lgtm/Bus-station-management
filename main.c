@@ -36,6 +36,9 @@ while (choice<1 || choice>10){
     scanf("%d",&choice);
 }
 //verify if the manager really want to continue this operation
+
+if(a!=10){
+
 int a;
 	printf("\n Are you sure you want to continue this operation \t 1:yes   2:no ");
 	scanf("%d",&a);
@@ -44,6 +47,8 @@ int a;
 	scanf("%d",&a);
 	}
 	if(a==2){continue;}
+
+}
 	//in case confirmation
 switch (choice){
     case 1 : printf("\n\n \t \t \t ADD DEPARTURE \n ");AddDeparture(&H);break;

@@ -76,7 +76,7 @@ void AddDeparture(list** H)
     Q->value = D;
     Q->next = *H;
     *H = Q;
-    printf("Departure added successfully!\n");
+    printf("\n \t Departure added successfully!\n");
 }
 
 /*---------------------------------------

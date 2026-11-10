@@ -35,16 +35,8 @@ void searchdest(list *H){
 	bool exist=false;
 	list* P=H;
 		while(P!=NULL){
-		   if(strcasecmp((((*H).value).destination), dest)==0){
-		    printf("\n-------------------------\n");
-            printf("Departure number: %d\n", P->value.number);
-            printf("Destination: %s\n", P->value.destination);
-            printf("Departure time: %02d:%02d\n",
-                   P->value.departureTime.hour,
-                   P->value.departureTime.minute);
-            printf("Bus capacity: %d\n", P->value.busCapacity);
-            printf("Available seats: %d\n", P->value.availableSeats);
-            P = P->next;
+		   if(strcasecmp((((*P).value).destination), dest)==0){
+		    WriteDeparture(P);
         exist=true;
 		   }
 		    P=(*P).next;
