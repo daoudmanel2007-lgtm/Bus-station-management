@@ -92,7 +92,7 @@ void Reserve(list* H)
         scanf("%d", &Num);
         P = Search(H, Num);
  
-        if (P == NULL) {
+        if (!exist(H, Num)) {      /* exist() using this function */
             printf("Departure not found\n");
         }
         else if (P->value.availableSeats == 0) {
@@ -133,7 +133,7 @@ void Cancel(list* H)
         scanf("%d", &Num);
         P = Search(H, Num);
  
-        if (P == NULL) {
+        if (!exist(H, Num)) {      /* exist() using this function */
             printf("Departure not found\n");
         }
         else if (P->value.nbsold == 0) {
@@ -151,4 +151,4 @@ void Cancel(list* H)
             PrintRefund(price);
         }
     }
-}   
+}
