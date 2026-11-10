@@ -19,35 +19,21 @@ void ReadString(char message[], char str[], int size) {
     ADD A DEPARTURE
 
 -----------------------------------------*/
-
 void AddDeparture(list** H)
 {
-    list *Q, *P;
+    list *Q;
     Departure D;
-    int exists;
 
-    /*--------------------------------------------------------------
-    NOTE:WHEN KHADIDJA ADD THE EXIST FUNCTION I WILL CHANGE THIS PART 
-    ---------------------------------------------------------------*/
     do {
         D.number = ReadInt("Enter departure number: ");
-        P = *H;
-        exists = 0;
 
-        while (P != NULL) {
-            if (P->value.number == D.number) {
-                exists = 1;
-                break;
-            }
-            P = P->next;
-        }
-
-        if (exists == 1)
+        if (exist(*H, D.number) == true)
             printf("This departure number already exists! Enter another one.\n");
-    } while (exists == 1);
 
+    } while (exist(*H, D.number) == true);
+    
     ReadString("Enter destination: ", D.destination, sizeof(D.destination));
-    /*  JUST HERE */
+    
 
 
 
