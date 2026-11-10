@@ -1,5 +1,19 @@
 #include "datastructure.h"
+#include <string.h>
 
+int ReadInt(char message[]) {
+    int x;
+    printf("%s", message);
+    scanf("%d", &x);
+    while (getchar() != '\n');
+    return x;
+}
+
+void ReadString(char message[], char str[], int size) {
+    printf("%s", message);
+    fgets(str, size, stdin);
+    str[strcspn(str, "\n")] = '\0';
+}
 /*---------------------------------------
 
     ADD A DEPARTURE

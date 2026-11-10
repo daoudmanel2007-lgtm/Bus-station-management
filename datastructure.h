@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct {
     int hour;
@@ -28,5 +29,8 @@ typedef struct list {
     Departure value;
     struct list* next;
 } list;
+
+int ReadInt(char message[]);
+void ReadString(char message[], char str[], int size);
 
 #endif  // End of header guard

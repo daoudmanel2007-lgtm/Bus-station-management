@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include  "data structure.h"
+#include  "datastructure.h"
 
 
 
@@ -21,8 +21,8 @@ void searchdest(list *H){
 		//search part    
 	
 	bool exist=false;
-	list* p=H;
-		while(p!=NULL){
+	list* P=H;
+		while(P!=NULL){
 		   if(strcasecmp((((*H).value).destination), dest)==0){
 		    printf("\n-------------------------\n");
             printf("Departure number: %d\n", P->value.number);
@@ -35,7 +35,7 @@ void searchdest(list *H){
             P = P->next;
         exist=true;
 		   }
-		    p=(*p).next;
+		    P=(*P).next;
 	     }
 	     
 		 //case the destination does not exist
